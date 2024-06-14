@@ -6,12 +6,51 @@ namespace VehicleRentalSystem
     {
         static void Main(string[] args)
         {
-            Vehicle vehicle = new Car()
+
+
+            Vehicle car = new Car()
+            {
+                Brand = "Toyota",
+                Model = "Corolla",
+                Value = 15000,
+                SafetyRating = 3,
+                StartOfRent = new DateTime(2024, 6, 3),
+                EndOfRent = new DateTime(2024, 6, 13),
+                ActualReturnDate = new DateTime(2024, 6, 13),
+
+
+
+            };
+
+
+
+            Invoice invoiceCar = new Invoice(car);
+            invoiceCar.CalculateTotalCosts();
+
+
+            Vehicle motorcycle = new Motorcycle()
             {
                 Brand = "Toyota",
                 Model = "Corolla",
                 Value = 10000,
-                SafetyRating = 3,
+                Age = 20,
+                StartOfRent = new DateTime(2024, 6, 3),
+                EndOfRent = new DateTime(2024, 6, 13),
+                ActualReturnDate = new DateTime(2024, 6, 13),
+
+
+
+            };
+
+            Invoice invoiceMotorcycle = new Invoice(motorcycle);
+            invoiceMotorcycle.CalculateTotalCosts();
+
+            Vehicle cargo = new CargoVan()
+            {
+                Brand = "Toyota",
+                Model = "Corolla",
+                Value = 20000,
+                YearsOfExperience = 8,
                 StartOfRent = new DateTime(2024,6,3),
                 EndOfRent = new DateTime(2024, 6, 18),
                 ActualReturnDate = new DateTime(2024, 6, 13),
@@ -20,8 +59,8 @@ namespace VehicleRentalSystem
 
             };
 
-            Invoice invoice = new Invoice(vehicle);
-            invoice.CalculateTotalCosts();
+            Invoice cargoVaninvoice = new Invoice(cargo);
+            cargoVaninvoice.CalculateTotalCosts();
         }
     }
 }
