@@ -1,34 +1,18 @@
-TASK 1 : VEHICLE RENTAL SYSTEM
-
-How do I approached the problem?
-Firstly, I had to read the problem carefully and understand it well. 
-Secondly, I tried to image the solution in my head.
-Thirdly, I selected the best way of solving this problem and started writing code.
-During the process I had small issues, but I managed to fix them( Who runs code sucessfully in the first attempt :D).
-
+TASK 1: VEHICLE RENTAL SYSTEM
+How did I approach the problem?
+Understanding the Problem: I started by reading the problem carefully to understand the requirements and constraints.
+Visualizing the Solution: I then visualized the solution in my head, considering various approaches to solving the problem.
+Selecting the Best Approach: I selected the most efficient approach and began writing the code. During the process, I encountered small issues, but I managed to fix them (who runs code successfully on the first attempt, right?
+).
 How does the solution work?
-I have used polymorphism. By doing that I can have:
-Managable code,
-Code quality,
-OOP and SOLID princeples.
+I used polymorphism to achieve a maintainable, high-quality code base that adheres to OOP and SOLID principles.
 
-I had to find the commong properties for all the vehicles and created an abstract class "Vehicle".
-After that there were a different property for the rest of classes.(safety rating, age, years of experience).
-
-When I inherited the abstract class I had to calculate the total cost, insurance and additional insurance. They were different according to the vehicle.
-
-Then I had to create a class "Invoice".
-In this class I calculate the total sum for :
+Abstract Class: I identified common properties for all vehicles and created an abstract class called Vehicle. This class serves as a base class for all vehicle types.
+Specific Properties: Each derived class has specific properties (e.g., safety rating, age, years of experience) that are unique to that type of vehicle.
+Calculations: When inheriting the abstract class, I implemented methods to calculate the total cost, insurance, and additional insurance, which vary according to the vehicle type.
+Invoice Class: I created a class called Invoice to calculate the total sums, including:
 Total cost
 Insurance
-Additional insurane
-Total sum.
-
-I have used abstraction and encapsulation, because there were methods such as :
-TTotal cost
-Insurance
-Additional insurane
-which must no be shown public. If they are the user might change the current formula.
-
-
-
+Additional insurance
+Overall total sum
+I employed abstraction and encapsulation to hide methods like TotalCost, Insurance, and AdditionalInsurance from being publicly accessible. This prevents users from altering the current formula, ensuring the integrity of the calculations.
